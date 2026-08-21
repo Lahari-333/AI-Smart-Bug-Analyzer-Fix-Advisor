@@ -1,0 +1,39 @@
+{
+  "test_cases": [
+    {
+      "id": 1,
+      "bug_type": "Authentication",
+      "expected_exception": "NullPointerException",
+      "expected_component": "Authentication",
+      "expected_root_cause": "Null / Initialization Issue"
+    },
+    {
+      "id": 2,
+      "bug_type": "Database",
+      "expected_exception": "SQLException",
+      "expected_component": "Database",
+      "expected_root_cause": "Database / Data Access"
+    },
+    {
+      "id": 3,
+      "bug_type": "Network",
+      "expected_exception": "SocketTimeoutException",
+      "expected_component": "Backend",
+      "expected_root_cause": "Network / Timeout"
+    },
+    {
+      "id": 4,
+      "bug_type": "Security",
+      "expected_exception": "SecurityException",
+      "expected_component": "Authentication",
+      "expected_root_cause": "Authentication"
+    },
+    {
+      "id": 5,
+      "bug_type": "Concurrency",
+      "expected_exception": "RuntimeException",
+      "expected_component": "Backend",
+      "expected_root_cause": "Concurrency / Race Condition"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "bug_title": "Application crashes during login",
+        "bug_description": "The application crashes immediately after clicking the Login button.",
+        "stack_trace": "java.lang.NullPointerException\nat LoginService.java:45\nat LoginController.java:18",
+        "expected_severity": "Critical",
+        "expected_exception": "NullPointerException"
+    },
+    {
+        "id": 2,
+        "bug_title": "Database connection timeout",
+        "bug_description": "Unable to connect to the database after several retries.",
+        "stack_trace": "java.sql.SQLException\nat DatabaseService.java:101",
+        "expected_severity": "High",
+        "expected_exception": "SQLException"
+    },
+    {
+        "id": 3,
+        "bug_title": "File upload failed",
+        "bug_description": "Uploading large PDF files throws an exception.",
+        "stack_trace": "java.io.IOException\nat FileUploadService.java:67",
+        "expected_severity": "Medium",
+        "expected_exception": "IOException"
+    },
+    {
+        "id": 4,
+        "bug_title": "Payment processing failed",
+        "bug_description": "Users cannot complete payment due to server failure.",
+        "stack_trace": "java.lang.RuntimeException\nat PaymentService.java:90",
+        "expected_severity": "Critical",
+        "expected_exception": "RuntimeException"
+    },
+    {
+        "id": 5,
+        "bug_title": "Application runs out of memory",
+        "bug_description": "Processing a huge dataset causes the application to crash.",
+        "stack_trace": "java.lang.OutOfMemoryError\nat DataProcessor.java:120",
+        "expected_severity": "Critical",
+        "expected_exception": "OutOfMemoryError"
+    },
+    {
+        "id": 6,
+        "bug_title": "API request timeout",
+        "bug_description": "Weather API request fails due to timeout.",
+        "stack_trace": "java.net.SocketTimeoutException\nat ApiService.java:87",
+        "expected_severity": "High",
+        "expected_exception": "SocketTimeoutException"
+    },
+    {
+        "id": 7,
+        "bug_title": "Unauthorized access",
+        "bug_description": "Users receive unauthorized access despite valid credentials.",
+        "stack_trace": "java.lang.SecurityException\nat AuthService.java:55",
+        "expected_severity": "High",
+        "expected_exception": "SecurityException"
+    },
+    {
+        "id": 8,
+        "bug_title": "Dashboard loads slowly",
+        "bug_description": "Dashboard takes over 30 seconds to load.",
+        "stack_trace": "",
+        "expected_severity": "Low",
+        "expected_exception": "No Exception"
+    },
+    {
+        "id": 9,
+        "bug_title": "Submit button overlaps text field",
+        "bug_description": "UI alignment issue on mobile devices.",
+        "stack_trace": "",
+        "expected_severity": "Low",
+        "expected_exception": "No Exception"
+    },
+    {
+        "id": 10,
+        "bug_title": "Index out of bounds",
+        "bug_description": "Application crashes while accessing an invalid list index.",
+        "stack_trace": "java.lang.IndexOutOfBoundsException\nat ReportService.java:78",
+        "expected_severity": "High",
+        "expected_exception": "IndexOutOfBoundsException"
+    }
+]

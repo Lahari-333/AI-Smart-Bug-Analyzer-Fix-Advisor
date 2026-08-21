@@ -1,0 +1,35 @@
+{
+  "project": "AI Smart Bug Analyzer",
+  "test_cases": [
+    {
+      "id": 1,
+      "bug_type": "Authentication / NullPointerException",
+      "status": "Executed",
+      "observations": "Triage, log analysis, root cause, duplicate detection, remediation and analytics executed."
+    },
+    {
+      "id": 2,
+      "bug_type": "Database / SQLException",
+      "status": "Executed",
+      "observations": "Complete pipeline executed successfully."
+    },
+    {
+      "id": 3,
+      "bug_type": "Network / SocketTimeoutException",
+      "status": "Executed",
+      "observations": "Complete pipeline executed successfully."
+    },
+    {
+      "id": 4,
+      "bug_type": "Security / SecurityException",
+      "status": "Executed",
+      "observations": "Complete pipeline executed successfully."
+    },
+    {
+      "id": 5,
+      "bug_type": "Concurrency / RuntimeException",
+      "status": "Executed",
+      "observations": "Complete pipeline executed successfully."
+    }
+  ]
+}
