@@ -1,92 +1,99 @@
-# AI Smart Bug Analyzer & Fix Advisor
+# 🐞 AI Smart Bug Analyzer & Fix Advisor
 
-## Overview
-
-AI Smart Bug Analyzer & Fix Advisor is an AI-powered system developed as part of the Infosys Springboard Internship. The project helps developers analyze software bug reports, retrieve similar historical defects using Retrieval-Augmented Generation (RAG), and provide possible fix suggestions and severity prediction.
+An AI-powered software defect analysis system that automatically analyzes bug reports, identifies important defect information, detects duplicate bugs, performs root-cause analysis, retrieves similar historical bugs, and recommends fixes using a multi-agent architecture with semantic search and a FAISS-based knowledge base.
 
 ---
 
-## Milestone 1 Objectives
+## 📌 Project Overview
 
-- Study defect analysis workflows
-- Understand RAG architecture
-- Learn semantic similarity techniques
-- Analyze bug report structures
-- Design system architecture
-- Develop the Bug Submission Module
-- Build the initial Historical Defect Knowledge Base
+Software development teams receive large numbers of bug reports containing descriptions, stack traces, logs, and other technical information. Manually analyzing these reports is time-consuming and makes it difficult to identify previously resolved issues.
 
----
+The **AI Smart Bug Analyzer & Fix Advisor** addresses this problem by combining:
 
-## Features Implemented
+- Multi-agent AI-based defect analysis
+- Semantic similarity search
+- Historical defect knowledge retrieval
+- FAISS vector search
+- Sentence Transformer embeddings
+- Duplicate bug detection
+- Root-cause analysis
+- Remediation recommendations
+- Defect pattern analytics
+- Knowledge-base growth
+- End-to-end validation
 
-- Bug report submission
-- Direct text input for bug reports
-- Stack trace and error log input
-- File upload support
-- Dataset exploration and analysis
-- Initial project architecture
-
----
-
-## Tech Stack
-
-- Python
-- Streamlit
-- NumPy
-- Pandas
-- RAG (Retrieval-Augmented Generation)
-- Semantic Similarity
-- Bugzilla Dataset
+The system provides developers with a structured analysis of a submitted bug and uses previously resolved bugs to improve future recommendations.
 
 ---
 
-## Project Structure
+# 🎯 Objectives
 
-```
-AI-Smart-Bug-Analyzer/
-│
-├── app.py
-├── README.md
-├── .gitignore
-├── documentation/
-└── screenshots/
-```
+The main objectives of the project are:
 
----
-
-## Dataset
-
-This project uses public Bugzilla historical bug datasets (Mozilla, Apache, and Eclipse repositories).
-
-Due to GitHub's file size limitations, the dataset is not included in this repository.
-
-The dataset used during development includes:
-
-- corpus (fixsev).txt
-- embedding.npy
-- fix.csv
-- fix_train.csv
-- fix_test.csv
-- sev.csv
-- sev_train.csv
-- sev_test.csv
-- vocab.lst
+1. Automatically analyze submitted software defects.
+2. Classify bugs based on important characteristics.
+3. Analyze stack traces and identify exceptions.
+4. Identify possible root causes.
+5. Detect whether a bug is similar to an existing historical bug.
+6. Retrieve relevant historical defect reports.
+7. Recommend possible fixes and preventive measures.
+8. Identify recurring defect patterns.
+9. Continuously improve the knowledge base using verified resolved bugs.
+10. Validate the system using multiple bug types and dataset sizes.
 
 ---
 
-## Future Enhancements
+# 🏗️ System Architecture
 
-- Historical Defect Knowledge Base
-- Embedding Generation
-- Vector Database (FAISS)
-- Duplicate Bug Detection
-- Root Cause Analysis
-- AI-based Fix Recommendation
-- Severity Prediction
+The overall workflow of the system is:
 
----
-
-## Internship
-
-Project developed as part of the **Infosys Springboard Internship Program**.
+```text
+                    ┌─────────────────────┐
+                    │   Bug Submission    │
+                    │ Title / Description │
+                    │ Stack Trace / File  │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   Bug Processing    │
+                    └──────────┬──────────┘
+                               │
+             ┌─────────────────┼─────────────────┐
+             ▼                 ▼                 ▼
+      ┌─────────────┐   ┌─────────────┐   ┌──────────────┐
+      │ Triage      │   │ Log Analysis│   │ Root Cause   │
+      │ Agent       │   │ Agent       │   │ Analysis     │
+      └──────┬──────┘   └──────┬──────┘   └──────┬───────┘
+             │                 │                 │
+             └─────────────────┼─────────────────┘
+                               ▼
+                    ┌─────────────────────┐
+                    │  Agent Orchestrator │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Similarity Search   │
+                    │ Sentence Transformer│
+                    │ + FAISS             │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Duplicate Detection │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Remediation Agent   │
+                    │ Fix Recommendations │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+             ┌─────────────────┴─────────────────┐
+             ▼                                   ▼
+   ┌─────────────────────┐             ┌─────────────────────┐
+   │ Defect Pattern       │             │ Knowledge Base      │
+   │ Analytics            │             │ Growth              │
+   └─────────────────────┘             └─────────────────────┘
